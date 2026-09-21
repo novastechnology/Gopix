@@ -243,6 +243,18 @@ a {
     padding: 80px 0;
 }
 
+.about-image-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .about-img {
     width: 80%;
     height: auto;
@@ -318,6 +330,18 @@ a {
     padding: 80px 0;
 }
 
+.preview-image-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.preview-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .preview-img {
     width: 80%;
     border-radius: 58px;
@@ -343,7 +367,16 @@ a {
     }
     .why-choose-us-section .why-image-wrapper {
         order: 2;
+        display: flex;
+        justify-content: flex-end;
     }
+}
+
+.why-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .why-img {
@@ -465,53 +498,77 @@ a {
 }
 
 .cta-banner {
-    background-color: #0056d2;
-    border-radius: 28px;
-    padding: 48px 40px;
+    background-color: #0052cc;
+    border-radius: 32px;
+    padding: 50px 60px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
 @media (min-width: 992px) {
     .cta-banner {
-        padding: 60px 80px;
         flex-direction: row;
-        text-align: left;
-        justify-content: space-between;
-    }
-    .cta-content {
-        max-width: 600px;
     }
 }
 
-.cta-tag {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    padding: 6px 16px;
+.cta-badge {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 6px 18px;
     border-radius: 9999px;
-    margin-bottom: 24px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .cta-title {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
-    color: #ffffff;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 46px;
+    line-height: 1.15;
     margin-bottom: 16px;
+    font-weight: 400;
+    color: white;
 }
 
 .cta-subtitle {
-    font-size: 1.1rem;
+    max-width: 480px;
     opacity: 0.9;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.cta-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.cta-camera-img {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.cta-btn {
+    background-color: #003b95;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 12px 34px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.cta-btn:hover {
+    background-color: #002d72;
+    transform: translateY(-1px);
 }
 
 /* 9. Modern Footer */
