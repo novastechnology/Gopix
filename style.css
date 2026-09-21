@@ -1,0 +1,196 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8fafc;
+    background-image: 
+        linear-gradient(to right, rgba(226, 232, 240, 0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 232, 240, 0.45) 1px, transparent 1px);
+    background-size: 40px 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #495057;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.nav-container,
+.hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header & Navigation */
+.header {
+    padding: 24px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #495057;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #0056d2;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-quote {
+    background-color: #0056d2;
+    color: #ffffff;
+    padding: 10px 24px;
+}
+
+.btn-quote:hover {
+    background-color: #0045aa;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #0056d2;
+    color: #ffffff;
+    padding: 14px 32px;
+    margin-bottom: 32px;
+}
+
+.btn-primary:hover {
+    background-color: #0045aa;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 86, 210, 0.25);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 60px;
+    }
+}
+
+/* Hero Content */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    margin-bottom: 24px;
+}
+
+.badge-icon {
+    width: 14px;
+    height: 14px;
+    color: #0056d2;
+}
+
+.hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 400; /* DM Serif Display is naturally bold */
+    color: #084298;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #495057;
+    margin-bottom: 36px;
+    max-width: 580px;
+}
+
+/* Trust Markers */
+.trust-markers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0056d2;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trust-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.trust-bullet {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Hero Banner */
+.hero-banner {
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
