@@ -5,6 +5,9 @@
     padding: 0;
 }
 
+img, svg { max-width: 100%; height: auto; display: block; }
+html, body { width: 100%; overflow-x: hidden; }
+
 body {
     background-color: #fbfcfe;
     background-image: 
@@ -137,6 +140,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .logo {
@@ -146,26 +150,52 @@ a {
     display: block;
 }
 
-.nav-links {
+/* Navigation Styles */
+.nav-toggle {
     display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #09479b;
+    cursor: pointer;
+}
+.nav-toggle .close-icon { display: none; }
+.nav-toggle.active .menu-icon { display: none; }
+.nav-toggle.active .close-icon { display: block; }
+
+.nav-wrapper {
+    display: none;
+}
+.nav-menu {
     list-style: none;
-    gap: 32px;
+    padding: 0;
+    margin: 0;
 }
-
-@media (min-width: 992px) {
-    .nav-links {
-        display: flex;
-    }
-}
-
-.nav-links a {
+.nav-link {
     color: #495057;
     font-weight: 500;
 }
-
-.nav-links a:hover {
+.nav-link:hover {
     color: #0056d2;
 }
+
+@media (min-width: 769px) {
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: flex-end;
+    }
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 
 /* Dropdown Styles */
 .dropdown {
@@ -858,4 +888,251 @@ a {
     display: block;
     margin: 0 auto;
     box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.22);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+
+/* 2. Tablet Breakpoint (Max 1024px) */
+@media (max-width: 1024px) {
+    /* Navigation */
+    .header { padding: 4px 0; }
+    .nav-container { padding: 16px 28px; }
+    .nav-wrapper { gap: 18px; }
+    .nav-menu { gap: 18px; }
+    .dropdown-menu { right: 0; left: auto; }
+
+    /* Hero Section */
+    .hero-container { grid-template-columns: 1fr 1fr; }
+    .hero-image-wrapper { max-width: 440px; margin: 0 auto; }
+    .hero-title { font-size: 52px; }
+
+    /* Product Listing Pages */
+    .catalog-grid { gap: 36px 28px; }
+    .catalog-img-wrapper { height: 180px; }
+    .catalog-img { max-height: 160px; }
+
+    /* CTA Banner */
+    .cta-banner { padding: 36px 40px; }
+    .cta-camera-img { max-width: 140px; }
+}
+
+/* 3. Mobile Landscape & Small Tablets (Max 768px) */
+@media (max-width: 768px) {
+    /* Navigation - Mobile Menu Drawer */
+    .nav-toggle { display: block; }
+    .nav-container { position: relative; }
+    .nav-wrapper {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        gap: 24px;
+    }
+    .nav-wrapper.active { display: flex; }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+    .nav-link { display: block; width: 100%; }
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding-left: 16px;
+        background: transparent;
+        display: none;
+    }
+    .dropdown.active .dropdown-menu { display: block; }
+    .nav-cta {
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    /* Hero Section */
+    .hero-container {
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+        display: flex;
+    }
+    .hero-image-wrapper {
+        order: -1;
+        max-width: 90%;
+        margin: 0 auto 32px auto;
+    }
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-title { font-size: 40px; line-height: 1.15; }
+
+    /* Alternating Sections */
+    .grid-2-col { grid-template-columns: 1fr; }
+    .feature-row, .about-section, .why-choose-us, .vision-mission-section .grid-2-col {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    .feature-content, .about-content, .why-content, .vision-content {
+        align-items: center;
+        text-align: center;
+    }
+    .feature-image-wrapper {
+        order: -1;
+        margin: 0 auto 32px auto;
+    }
+
+    /* Product Listing Pages */
+    .catalog-grid {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    .catalog-card { text-align: center; }
+    .catalog-specs li { text-align: left; }
+
+    /* Bottom Showcase Images */
+    .showcase-banner, .showcase-img {
+        max-height: 280px;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+    }
+    .cta-action { justify-content: center; }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-brand, .footer-contact-list { align-items: center; }
+}
+
+/* 4. Small Mobile Phones (Max 480px) */
+@media (max-width: 480px) {
+    .container { padding-left: 16px; padding-right: 16px; }
+    .hero-title { font-size: 32px; }
+    .btn, .btn-quote, .btn-read-more {
+        min-height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .catalog-name { font-size: 1.2rem; }
+    .catalog-mp { font-size: 1.1rem; }
+    .trust-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+
+/* =========================================
+   Contact Page (contact.html)
+   ========================================= */
+
+.contact-section {
+    padding: 20px 0 100px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 40px auto 80px auto;
+}
+
+.map-container {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    min-height: 420px;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #eaf0f7;
+    color: #0056d2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 13px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-value {
+    font-size: 18px;
+    color: #1e293b;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a.contact-value:hover {
+    color: #0056d2;
+}
+
+/* Contact Page Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+    .map-container {
+        min-height: 320px;
+        height: 320px;
+    }
 }

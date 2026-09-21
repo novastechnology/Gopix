@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopix - Protect What Matters Most</title>
+    <meta name="description" content="Gopix is one of India's leading and most trusted manufacturers of CCTV and safety products.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Header & Navigation -->
+    <header class="header">
+        <nav class="container nav-container">
+            <!-- Left: Logo -->
+            <a href="index.html" class="logo-link">
+                <img src="./assets/Gopix_logo.png" alt="Gopix Logo" class="logo">
+            </a>
+            
+                        <!-- Hamburger Toggle Button (Hidden on Desktop) -->
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </button>
+
+            <!-- Collapsible Nav Wrapper (Links + Dropdown + Button) -->
+            <div class="nav-wrapper" id="navWrapper">
+                <nav class="nav-menu">
+                    <div class="nav-item dropdown" id="navDropdown">
+                        <button type="button" class="dropdown-toggle" id="productsDropdownBtn" aria-expanded="false">
+                            Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                        </button>
+                        <ul class="dropdown-menu" id="productsDropdownMenu">
+                            <li><a href="hd_product.html" class="dropdown-item">HD Product</a></li>
+                            <li><a href="ip_product.html" class="dropdown-item">IP Product</a></li>
+                            <li><a href="special_ip_product.html" class="dropdown-item">Special IP Product</a></li>
+                            <li><a href="wifi_4g.html" class="dropdown-item">Wifi & 4G Product</a></li>
+                        </ul>
+                    </div>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#why-gopix" class="nav-link">Why Gopix</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Kept intact on mobile inside the menu drawer -->
+                <a href="#quote" class="btn btn-quote nav-cta">Get a Quote</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Page Title Section -->
+        <section class="page-title-section" style="padding-bottom: 0;">
+            <div class="container">
+                <h1 class="section-title" style="margin-bottom: 36px; font-size: clamp(2.5rem, 5vw, 3.2rem);">Get in Touch</h1>
+            </div>
+        </section>
+
+        <!-- Main Contact Section -->
+        <section class="contact-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Left: Google Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=GOPIX%20Anna%20Salai%20Chennai&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Right: Contact Details -->
+                    <div class="contact-details">
+                        <!-- Email -->
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">EMAIL</span>
+                                <a href="mailto:gopixindia@gmail.com" class="contact-value">gopixindia@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Technical Support -->
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">TECHNICAL SUPPORT</span>
+                                <a href="tel:+919150306013" class="contact-value">+91 91503 06013</a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">LOCATION</span>
+                                <span class="contact-value">Anna Salai, Chennai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="./assets/Gopix_logo.png" alt="Gopix Logo" class="footer-logo">
+                <p class="footer-desc">Smart surveillance solutions designed to protect what matters most with quality, reliability, and modern confidence.</p>
+            </div>
+            
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Products</h4>
+                <ul class="footer-list">
+                    <li><a href="#">HD Cameras</a></li>
+                    <li><a href="#">IP Cameras</a></li>
+                    <li><a href="#">Special IP Cameras</a></li>
+                    <li><a href="#">WiFi & 4G Cameras</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-col">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fa-regular fa-envelope"></i> gopixindia@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 91503 06013</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Anna Salai, Chennai</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gopix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Shared Interaction Script -->
+    <script src="main.js"></script>
+</body>
+</html>

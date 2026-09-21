@@ -27,26 +27,34 @@
                 <img src="./assets/Gopix_logo.png" alt="Gopix Logo" class="logo">
             </a>
             
-            <!-- Center: Nav Links -->
-            <ul class="nav-links">
-                <li class="nav-item dropdown">
-                    <button type="button" class="dropdown-toggle" id="productsDropdownBtn" aria-expanded="false">
-                        Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-                    </button>
-                    <ul class="dropdown-menu" id="productsDropdownMenu">
-                        <li><a href="hd_product.html" class="dropdown-item">HD Product</a></li>
-                        <li><a href="ip_product.html" class="dropdown-item">IP Product</a></li>
-                        <li><a href="special_ip_product.html" class="dropdown-item">Special IP Product</a></li>
-                        <li><a href="wifi_4g.html" class="dropdown-item">Wifi & 4G Product</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#why-gopix">Why Gopix</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-            <!-- Right: CTA Button -->
-            <a href="#quote" class="btn btn-quote">Get a Quote</a>
+                        <!-- Hamburger Toggle Button (Hidden on Desktop) -->
+            <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars menu-icon"></i>
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </button>
+
+            <!-- Collapsible Nav Wrapper (Links + Dropdown + Button) -->
+            <div class="nav-wrapper" id="navWrapper">
+                <nav class="nav-menu">
+                    <div class="nav-item dropdown" id="navDropdown">
+                        <button type="button" class="dropdown-toggle" id="productsDropdownBtn" aria-expanded="false">
+                            Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                        </button>
+                        <ul class="dropdown-menu" id="productsDropdownMenu">
+                            <li><a href="hd_product.html" class="dropdown-item">HD Product</a></li>
+                            <li><a href="ip_product.html" class="dropdown-item">IP Product</a></li>
+                            <li><a href="special_ip_product.html" class="dropdown-item">Special IP Product</a></li>
+                            <li><a href="wifi_4g.html" class="dropdown-item">Wifi & 4G Product</a></li>
+                        </ul>
+                    </div>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#why-gopix" class="nav-link">Why Gopix</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- Kept intact on mobile inside the menu drawer -->
+                <a href="#quote" class="btn btn-quote nav-cta">Get a Quote</a>
+            </div>
         </nav>
     </header>
 
@@ -460,33 +468,7 @@
         </div>
     </footer>
 
-    <!-- Dropdown Interaction Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdown = document.querySelector('.dropdown');
-            const dropdownBtn = document.getElementById('productsDropdownBtn');
-            
-            if (dropdown && dropdownBtn) {
-                dropdownBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    dropdown.classList.toggle('active');
-                });
-                
-                document.addEventListener('click', (e) => {
-                    if (!dropdown.contains(e.target)) {
-                        dropdown.classList.remove('active');
-                    }
-                });
-                
-                const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
-                dropdownItems.forEach(item => {
-                    item.addEventListener('click', () => {
-                        dropdown.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
+        <!-- Shared Interaction Script -->
+    <script src="main.js"></script>
 </body>
 </html>
