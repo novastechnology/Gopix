@@ -19,9 +19,9 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- 1. Header & Navigation -->
     <header class="header">
-        <nav class="nav-container">
+        <nav class="container nav-container">
             <!-- Left: Logo -->
             <a href="index.html" class="logo-link">
                 <img src="./assets/Gopix_logo.png" alt="Gopix Logo" class="logo">
@@ -40,49 +40,248 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main class="hero-section">
-        <div class="hero-container">
+    <main>
+        <!-- 2. Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <!-- Left Column: Content -->
+                <div class="hero-content">
+                    <div class="badge">
+                        <i class="fa-solid fa-wand-magic-sparkles badge-icon"></i>
+                        <span>SMART SECURITY BUILT FOR TRUST</span>
+                    </div>
+                    
+                    <h1 class="hero-title">Protect What <br> Matters Most.</h1>
+                    
+                    <p class="section-description">
+                        Gopix is one of India's leading and most trusted manufacturers of CCTV and safety products. Our product range includes HD cameras, IP cameras, DVRs, NVRs, access control systems, power supplies, burglar alarm, routers, and Wi-Fi/4G cameras.
+                    </p>
+                    
+                    <a href="#" class="btn btn-primary">Read More</a>
+                    
+                    <div class="trust-markers">
+                        <div class="trust-item">
+                            <i class="fa-solid fa-shield-halved trust-icon"></i>
+                            <span>Trusted by 10,000 + installs</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fa-solid fa-circle trust-icon bullet"></i>
+                            <span>4K Night Vision AI Detection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Banner Image -->
+                <div class="hero-image-wrapper">
+                    <img src="./assets/banner_hero.png" alt="Gopix Security Camera" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Section -->
+        <section class="about-section">
+            <div class="container grid-2-col">
+                <div class="about-image-wrapper">
+                    <img src="./assets/banner_home_about.png" alt="Outdoor PTZ Camera" class="about-img">
+                </div>
+                <div class="about-content">
+                    <div class="badge">
+                        <span>ABOUT GOPIX</span>
+                    </div>
+                    <p class="section-description">
+                        Gopix is one of India's leading and most trusted manufacturers of CCTV and safety products. Our product range includes <strong>HD cameras, IP cameras, DVRs, NVRs, access control systems, power supplies, burglar alarm, routers, and Wi-Fi/4G cameras</strong>.
+                    </p>
+                    <p class="section-description">
+                        And we are committed to producing world-class highly reliable products. Over 100+ dealers & retailers, dedicated R&D team, and state-of-the-art manufacturing team. We consistently innovate and launch successful products that can support customers worldwide with soaring degrees.
+                    </p>
+                    <p class="section-description">
+                        Our advanced technology interventions, agility, and commitment to customers have helped us expand quickly. Deliver high quality, cost effective security solutions to our clients. As a professional manufacturer, we are dedicated to providing exceptional services and meeting every customer requirement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Mission & Vision Section -->
+        <section class="mission-vision-section">
+            <div class="container">
+                <div class="section-header center">
+                    <div class="badge">
+                        <span>FEATURE</span>
+                    </div>
+                    <h2 class="section-title">What drives us forward.</h2>
+                    <p class="section-subtitle">A clear mission and a bold vision shape every product and every interaction.</p>
+                </div>
+
+                <div class="grid-2-col cards-grid">
+                    <!-- Mission Card -->
+                    <div class="feature-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fa-regular fa-compass"></i>
+                        </div>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-desc">
+                            To provide world-class electronic surveillance and modern CCTV security technology, to protect humans and assets around the world. Driven by excellence, we focus on continuous innovation, research & development and delivering customer-centric, easy-to-use and top-tier security systems.
+                        </p>
+                    </div>
+
+                    <!-- Vision Card -->
+                    <div class="feature-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-desc">
+                            To become a pioneering, world-class enterprise through excellence and edge, and continuous innovation that is recognized for growth and superior technology to lead the market.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Triple Split Feature Preview -->
+        <section class="feature-preview-section">
+            <div class="container grid-2-col">
+                <div class="preview-image-wrapper">
+                    <img src="./assets/banner_home_what_we_do.png" alt="Night Vision Comparison" class="preview-img">
+                </div>
+                <div class="preview-content">
+                    <div class="badge">
+                        <span>VISION AND CLARITY</span>
+                    </div>
+                    <p class="section-description">
+                        At Gopix, we design, develop, and manufacture advanced security and surveillance solutions tailored for modern safety needs. Built on principles of innovation, quality, and customer support, we empower homes, businesses, and institutions across India with dependable security technology they can trust.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Why Choose Us Section -->
+        <section class="why-choose-us-section">
+            <div class="container grid-2-col reverse">
+                <div class="why-content">
+                    <div class="badge">
+                        <span>WHY CHOOSE US?</span>
+                    </div>
+                    <p class="section-description">
+                        Gopix stands out for its commitment to innovation, quality, and customer satisfaction. Our firmest products feature sophisticated motion detection and human detection technology, ensuring smarter, faster, and more accurate monitoring. You will appreciate the peace of mind and enhance security of your space, delivering a modern surveillance experience.
+                    </p>
+                </div>
+                <div class="why-image-wrapper">
+                    <img src="./assets/banner_home_why_choose_us.png" alt="Smart Home Camera" class="why-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Product Catalog / Showcase -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header split">
+                    <div class="split-left">
+                        <div class="badge">
+                            <span>PRODUCTS</span>
+                        </div>
+                        <h2 class="section-title">Engineered to watch over every corner.</h2>
+                    </div>
+                    <div class="split-right">
+                        <p class="section-subtitle right-note">A complete product line-up providing round-the-clock outdoor protection and instant peace of mind.</p>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <span class="product-badge">Night Vision</span>
+                            <img src="./assets/home_product_1.png" alt="IP Camera" class="product-img">
+                        </div>
+                        <h3 class="product-title">IP Camera</h3>
+                        <p class="product-specs">High-definition network camera with intelligent tracking.</p>
+                        <a href="#" class="product-link">Learn More &rarr;</a>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <span class="product-badge">Day & Night Vision</span>
+                            <img src="./assets/home_product_2.png" alt="Special IP Camera" class="product-img">
+                        </div>
+                        <h3 class="product-title">Special IP Camera</h3>
+                        <p class="product-specs">Advanced color night vision and active defense.</p>
+                        <a href="#" class="product-link">Learn More &rarr;</a>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <span class="product-badge">Solar IP Camera</span>
+                            <img src="./assets/home_product_3.png" alt="WiFi & 4G Camera" class="product-img">
+                        </div>
+                        <h3 class="product-title">WiFi & 4G Camera</h3>
+                        <p class="product-specs">Wire-free solar powered surveillance anywhere.</p>
+                        <a href="#" class="product-link">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Call to Action Banner -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-content">
+                        <div class="cta-tag">GET STARTED</div>
+                        <h2 class="cta-title">Ready to Secure Your Space?</h2>
+                        <p class="cta-subtitle">Discover intelligent surveillance solutions designed to protect every aspect of your life.</p>
+                    </div>
+                    <div class="cta-action">
+                        <a href="#" class="btn btn-white">View Product</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 9. Modern Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="./assets/Gopix_logo.png" alt="Gopix Logo" class="footer-logo">
+                <p class="footer-desc">Smart surveillance solutions designed to protect what matters most with quality, reliability, and modern confidence.</p>
+            </div>
             
-            <!-- Left Column: Content -->
-            <div class="hero-content">
-                <!-- Badge -->
-                <div class="badge">
-                    <i class="fa-solid fa-wand-magic-sparkles badge-icon"></i>
-                    <span>SMART SECURITY BUILT FOR TRUST</span>
-                </div>
-                
-                <!-- Headline -->
-                <h1 class="hero-title">Protect What <br> Matters Most.</h1>
-                
-                <!-- Description -->
-                <p class="hero-description">
-                    Gopix is one of India's leading and most trusted manufacturers of CCTV and safety products. Our product range includes HD cameras, IP cameras, DVRs, NVRs, access control systems, power supplies, burglar alarm, routers, and Wi-Fi/4G cameras.
-                </p>
-                
-                <!-- Primary CTA -->
-                <a href="#" class="btn btn-primary">Read More</a>
-                
-                <!-- Trust Markers -->
-                <div class="trust-markers">
-                    <div class="trust-item">
-                        <i class="fa-solid fa-shield-halved trust-icon"></i>
-                        <span>Trusted by 10,000 + installs</span>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fa-solid fa-video trust-icon"></i>
-                        <span>4K Night Vision AI Detection</span>
-                    </div>
-                </div>
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
 
-            <!-- Right Column: Banner Image -->
-            <div class="hero-image-container">
-                <img src="./assets/banner_hero.png" alt="Gopix Security Camera" class="hero-banner-img">
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Products</h4>
+                <ul class="footer-list">
+                    <li><a href="#">HD Cameras</a></li>
+                    <li><a href="#">IP Cameras</a></li>
+                    <li><a href="#">Special IP Cameras</a></li>
+                    <li><a href="#">WiFi & 4G Cameras</a></li>
+                </ul>
             </div>
-            
+
+            <div class="footer-contact-col">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-contact-list">
+                    <li><i class="fa-regular fa-envelope"></i> info@gopix.in</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Gujarat, India</li>
+                </ul>
+            </div>
         </div>
-    </main>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gopix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
