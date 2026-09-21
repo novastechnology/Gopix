@@ -29,7 +29,17 @@
             
             <!-- Center: Nav Links -->
             <ul class="nav-links">
-                <li><a href="#">Products</a></li>
+                <li class="nav-item dropdown">
+                    <button type="button" class="dropdown-toggle" id="productsDropdownBtn" aria-expanded="false">
+                        Products <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="productsDropdownMenu">
+                        <li><a href="hd_product.html" class="dropdown-item">HD Product</a></li>
+                        <li><a href="#ip-product" class="dropdown-item">IP Product</a></li>
+                        <li><a href="#special-ip-product" class="dropdown-item">Special IP Product</a></li>
+                        <li><a href="#wifi-4g-product" class="dropdown-item">Wifi & 4G Product</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Why Gopix</a></li>
                 <li><a href="#">Contact</a></li>
@@ -284,5 +294,33 @@
         </div>
     </footer>
 
+    <!-- Dropdown Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownBtn = document.getElementById('productsDropdownBtn');
+            
+            if (dropdown && dropdownBtn) {
+                dropdownBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('active');
+                });
+                
+                document.addEventListener('click', (e) => {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('active');
+                    }
+                });
+                
+                const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+                dropdownItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        dropdown.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
